@@ -1,0 +1,10 @@
+on: push
+jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, world!" > file.txt
+
+      - uses: actions/upload-artifact@v4
+        with:
+          path: file.txt
